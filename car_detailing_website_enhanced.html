@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faith Shine Luxury Detailing</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial, sans-serif;background:#0a0a0a;color:#fff;scroll-behavior:smooth}
+
+header{background:linear-gradient(180deg,#111,#000);padding:20px;text-align:center;border-bottom:1px solid rgba(255,215,0,0.3)}
+.logo{display:flex;justify-content:center;align-items:center;gap:12px}
+.logo svg{width:45px;height:45px}
+header h1{color:gold;font-weight:600;letter-spacing:1px}
+header p{opacity:0.7}
+
+nav{display:flex;justify-content:center;gap:20px;padding:10px;background:#111;position:sticky;top:0;z-index:100}
+nav a{color:#fff;text-decoration:none;font-size:14px;letter-spacing:1px}
+nav a:hover{color:gold}
+
+.hero{height:80vh;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.hero h2{font-size:40px;color:gold}
+.hero p{opacity:0.8;margin-top:10px}
+
+section{padding:60px 20px;text-align:center}
+.card{background:linear-gradient(145deg,#111,#1a1a1a);border-radius:15px;padding:25px;margin:15px auto;max-width:900px;box-shadow:0 0 20px rgba(255,215,0,0.1)}
+
+.services-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.service{flex:1 1 250px;background:#141414;padding:20px;border-radius:12px;transition:0.3s}
+.service:hover{transform:translateY(-5px);box-shadow:0 0 15px rgba(255,215,0,0.2)}
+
+.gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.gallery img{width:280px;border-radius:12px;transition:0.3s}
+.gallery img:hover{transform:scale(1.05)}
+
+.review{margin:15px;font-style:italic;opacity:0.85}
+
+.contact input,.contact textarea{width:90%;max-width:400px;padding:12px;margin:8px;border-radius:6px;border:none;background:#111;color:#fff}
+.contact button{padding:12px 25px;background:gold;border:none;border-radius:6px;cursor:pointer}
+
+footer{background:#000;padding:20px;text-align:center;border-top:1px solid rgba(255,215,0,0.3)}
+
+/* SLIDER */
+.slider-container{position:relative;max-width:600px;margin:auto}
+.slider-container img{width:100%;border-radius:12px}
+.slider-overlay{position:absolute;top:0;left:0;width:50%;overflow:hidden}
+.slider-line{position:absolute;top:0;left:50%;width:3px;height:100%;background:gold}
+
+/* SCROLL ANIMATION */
+.hidden{opacity:0;transform:translateY(40px);transition:all 0.8s ease}
+.show{opacity:1;transform:translateY(0)}
+
+/* MOBILE */
+@media(max-width:700px){
+.hero h2{font-size:28px}
+nav{flex-wrap:wrap}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<svg viewBox="0 0 100 100" fill="gold">
+<circle cx="50" cy="50" r="45" stroke="gold" stroke-width="4" fill="none"/>
+<line x1="50" y1="20" x2="50" y2="80" stroke="gold" stroke-width="4"/>
+<line x1="30" y1="40" x2="70" y2="40" stroke="gold" stroke-width="4"/>
+</svg>
+<h1>Faith Shine Luxury Detailing</h1>
+</div>
+<p>"Work with excellence, for His glory"</p>
+</header>
+
+<nav>
+<a href="#services">Services</a>
+<a href="#beforeafter">Before/After</a>
+<a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+<h2>Luxury Car Care</h2>
+<p>Precision. Integrity. Faith.</p>
+</div>
+
+<section id="services" class="hidden">
+<div class="card">
+<h2>Our Services</h2>
+<div class="services-grid">
+<div class="service"><h3>Basic Wash</h3><p>$25</p></div>
+<div class="service"><h3>Interior Detail</h3><p>$75</p></div>
+<div class="service"><h3>Full Detail</h3><p>$150</p></div>
+</div>
+</div>
+</section>
+
+<section id="beforeafter" class="hidden">
+<div class="card">
+<h2>Before & After</h2>
+<div class="slider-container">
+<img src="https://via.placeholder.com/600x350?text=After">
+<div class="slider-overlay" id="overlay">
+<img src="https://via.placeholder.com/600x350?text=Before">
+</div>
+<div class="slider-line" id="line"></div>
+</div>
+<input type="range" min="0" max="100" value="50" id="sliderRange">
+</div>
+</section>
+
+<section id="gallery" class="hidden">
+<div class="card">
+<h2>Gallery</h2>
+<div class="gallery">
+<img src="https://via.placeholder.com/300">
+<img src="https://via.placeholder.com/300">
+<img src="https://via.placeholder.com/300">
+</div>
+</div>
+</section>
+
+<section id="reviews" class="hidden">
+<div class="card">
+<h2>Reviews</h2>
+<div class="review">"Best detail I've ever had." ⭐⭐⭐⭐⭐</div>
+<div class="review">"Professional and trustworthy." ⭐⭐⭐⭐⭐</div>
+</div>
+</section>
+
+<section id="contact" class="hidden">
+<div class="card contact">
+<h2>Contact</h2>
+<input type="text" placeholder="Name"><br>
+<input type="email" placeholder="Email"><br>
+<textarea placeholder="Message"></textarea><br>
+<button>Send Message</button>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Faith Shine Luxury Detailing</p>
+</footer>
+
+<script>
+// SLIDER
+const slider=document.getElementById('sliderRange');
+const overlay=document.getElementById('overlay');
+const line=document.getElementById('line');
+slider.addEventListener('input',function(){overlay.style.width=this.value+'%';line.style.left=this.value+'%';});
+
+// SCROLL ANIMATION
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add('show');}
+});
+});
+
+document.querySelectorAll('.hidden').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
